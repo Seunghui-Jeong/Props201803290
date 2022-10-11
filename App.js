@@ -30,25 +30,25 @@ const App = () => {
     <ScrollView style={[styles.container]}>
       <View style = {[styles.controlSpace]}>
         <View style={[styles.buttonView]}>
-          <Button title="1" />
+          <Button title="CHANGE FLEX DIRECTION" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="2" />
+          <Button title="CHANGE JUSTIFY CONTENT" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="3" />
+          <Button title="CHANGE ALIGN ITEMS" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="4" />
+          <Button title="CHANGE DIRECTION" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="5" />
+          <Button title="CHAGE FLEX WRAP" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="6" />
+          <Button title="ADD SQUARE" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="7" />
+          <Button title="DELETE SQUARE" />
         </View>
       </View>
       
