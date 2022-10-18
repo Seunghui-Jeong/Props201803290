@@ -1,12 +1,30 @@
 import React from "react";
 import { Button, View, ScrollView, StyleSheet, Text, Image, ImageBackground } from "react-native";
 import Constants from 'expo-constants';
+import { useState } from "react";
 
 const App = () => {
+
+  const flexDirections = ['row', 'rew-reverse', 'column', 'column-reverse'];
+
+  const [flexDirection, setFlexDirection] = useState(0);
+
+  const Square = () => {
+    const sqStyle = {
+      width: 50,
+      height: 50,
+      backgroundColor:randomHexColor(),
+    };
+    return <View style={sqStyle} />;
+  };
+
+  const [squares, setSquares] = useState([Square(), Square(), Square()]);
+
+
   return (<>
     <View style={{paddingTop:Constants.statusBarHeight}}></View>
     <View style={[styles.container, styles.playingSpace]}>
-      
+      { squares.map(elem => elem) }      
     </View>
 
     <ScrollView style={[styles.container]}>
@@ -72,6 +90,10 @@ const styles = StyleSheet.create({
   }
 });
 
-
+const randomHexColor = () => {
+  return '#000000'.replace(/0/g, () => {
+    return (~~(Math.random() * 16)).toString(16);
+  });
+};
 
 export default App;
