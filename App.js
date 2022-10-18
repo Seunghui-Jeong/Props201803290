@@ -30,25 +30,34 @@ const App = () => {
     <ScrollView style={[styles.container]}>
       <View style = {[styles.controlSpace]}>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE FLEX DIRECTION" />
+          <Button title="CHANGE FLEX DIRECTION" 
+            onPress={() => console.log("CHANGE FLEX DIRECTION")}
+          />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE JUSTIFY CONTENT" />
+          <Button title="CHANGE JUSTIFY CONTENT" 
+            onPress={() => console.log("CHANGE JUSTIFY CONTENT")}
+          />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE ALIGN ITEMS" />
+          <Button title="CHANGE ALIGN ITEMS" 
+            onPress={() => console.log("CHANGE ALIGN ITEMS")}/>
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE DIRECTION" />
+          <Button title="CHANGE DIRECTION" 
+            onPress={() => console.log("CHANGE DIRECTION")}/>
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHAGE FLEX WRAP" />
+          <Button title="CHAGE FLEX WRAP" 
+            onPress={() => console.log("CHAGE FLEX WRAP")}/>
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="ADD SQUARE" />
+          <Button title="ADD SQUARE" 
+            onPress={() => console.log("ADD SQUARE")}/>
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="DELETE SQUARE" />
+          <Button title="DELETE SQUARE" 
+            onPress={() => console.log("DELETE SQUARE")}/>
         </View>
       </View>
       
