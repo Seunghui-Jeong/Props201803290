@@ -1,66 +1,37 @@
 import React from "react";
-import { Button, View, ScrollView, StyleSheet, Text, Image, ImageBackground } from "react-native";
-import Constants from 'expo-constants';
-import { useState } from "react";
+import { Button, View, ScrollView, StyleSheet } from "react-native";
 
 const App = () => {
-
-  const flexDirections = ['row', 'rew-reverse', 'column', 'column-reverse'];
-
-  const [flexDirection, setFlexDirection] = useState(0);
-
-  const Square = () => {
-    const sqStyle = {
-      width: 50,
-      height: 50,
-      backgroundColor:randomHexColor(),
-    };
-    return <View style={sqStyle} />;
-  };
-
-  const [squares, setSquares] = useState([Square(), Square(), Square()]);
-
-
   return (<>
-    <View style={{paddingTop:Constants.statusBarHeight}}></View>
     <View style={[styles.container, styles.playingSpace]}>
-      { squares.map(elem => elem) }      
+
     </View>
 
     <ScrollView style={[styles.container]}>
       <View style = {[styles.controlSpace]}>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE FLEX DIRECTION" 
-            onPress={() => console.log("CHANGE FLEX DIRECTION")}
-          />
+          <Button title="1" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE JUSTIFY CONTENT" 
-            onPress={() => console.log("CHANGE JUSTIFY CONTENT")}
-          />
+          <Button title="2" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE ALIGN ITEMS" 
-            onPress={() => console.log("CHANGE ALIGN ITEMS")}/>
+          <Button title="3" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHANGE DIRECTION" 
-            onPress={() => console.log("CHANGE DIRECTION")}/>
+          <Button title="4" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="CHAGE FLEX WRAP" 
-            onPress={() => console.log("CHAGE FLEX WRAP")}/>
+          <Button title="5" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="ADD SQUARE" 
-            onPress={() => setSquares([...squares, Square()])}/>
+          <Button title="6" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="DELECT SQUARE" 
-            onPress={() => setSquares(squares.filter((v, i) => i != squares.length-1))}/>
+          <Button title="7" />
         </View>
       </View>
-      
+
 
     </ScrollView>
 
@@ -90,10 +61,6 @@ const styles = StyleSheet.create({
   }
 });
 
-const randomHexColor = () => {
-  return '#000000'.replace(/0/g, () => {
-    return (~~(Math.random() * 16)).toString(16);
-  });
-};
+
 
 export default App;
