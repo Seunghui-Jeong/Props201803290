@@ -1,15 +1,13 @@
 import React from "react";
 import { Button, View, ScrollView, StyleSheet, Text, Image, ImageBackground } from "react-native";
 import Constants from 'expo-constants';
-
 const App = () => {
   return (<>
     <View style={{paddingTop:Constants.statusBarHeight}}></View>
     <View style={[styles.container, styles.playingSpace]}>
-
       <Text>글을 씁니다.</Text>
       <Text>글을 또 씁니다.</Text>
-
+      
       <Image source={require('./assets/favicon.png')}/>
       <ImageBackground
         style={{width:200, height:200}}
@@ -25,35 +23,34 @@ const App = () => {
         인해 다양한 민족과 인종이 유입되고 그에 따라 이질적인 문화가 들어옴으로써 바야흐로 다문화사회를 맞게 되었다. 다문화사회로의 전환은 이제 거부할 수 없는 하나의
         추세이며, 선택의 문제가 아니라 해결해야 할 필수 과제가 되었다
         </Text>
-
+      
       </ImageBackground>
     </View>
-
     <ScrollView style={[styles.container]}>
       <View style = {[styles.controlSpace]}>
         <View style={[styles.buttonView]}>
-          <Button title="1" />
+          <Button title="CHANGE FLEX DIRECTION" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="2" />
+          <Button title="CHANGE JUSTIFY CONTENT" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="3" />
+          <Button title="CHANGE ALIGN ITEMS" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="4" />
+          <Button title="CHANGE DIRECTION" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="5" />
+          <Button title="CHAGE FLEX WRAP" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="6" />
+          <Button title="ADD SQUARE" />
         </View>
         <View style={[styles.buttonView]}>
-          <Button title="7" />
+          <Button title="DELETE SQUARE" />
         </View>
       </View>
-      
+
     </ScrollView>
   </>);
 }
